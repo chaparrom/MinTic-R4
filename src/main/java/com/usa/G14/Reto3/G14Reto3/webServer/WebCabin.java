@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import com.usa.G14.Reto3.G14Reto3.services.ServicesCabin;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  *
@@ -25,6 +27,7 @@ import com.usa.G14.Reto3.G14Reto3.services.ServicesCabin;
 
 @RestController
 @RequestMapping("/api/Cabin")
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 public class WebCabin {
     @GetMapping("/holaMundo")
     public String saludar(){
