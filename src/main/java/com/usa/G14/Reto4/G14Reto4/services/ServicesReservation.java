@@ -58,6 +58,15 @@ public class ServicesReservation {
                 if(reservation.getStatus()!=null){
                     evt.get().setStatus(reservation.getStatus());
                 }
+                if(reservation.getScore()!=null){
+                    evt.get().setScore(reservation.getScore());
+                }
+                if(reservation.getCabin()!=null){
+                    evt.get().setCabin(reservation.getCabin());
+                }
+                if(reservation.getClient()!=null){
+                    evt.get().setClient(reservation.getClient());
+                }
                 metodCrud.save(evt.get());
                 return evt.get();
             }

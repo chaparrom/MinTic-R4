@@ -51,6 +51,12 @@ public class ServicesMessage {
                 if(message.getMessageText()!=null){
                     evt.get().setMessageText(message.getMessageText());
                 }
+                if(message.getCabin()!=null){
+                    evt.get().setCabin(message.getCabin());
+                }
+                if(message.getClient()!=null){
+                    evt.get().setClient(message.getClient());
+                }
                 metodCrud.save(evt.get());
                 return evt.get();
             }
